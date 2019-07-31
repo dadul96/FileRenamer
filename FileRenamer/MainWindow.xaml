@@ -1,0 +1,18 @@
+﻿<Window x:Class="FileRenamer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FileRenamer"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="FileRenamer" Height="165" Width="475">
+    <Grid>
+        <TextBox x:Name="pathText" HorizontalAlignment="Left" Height="20" Margin="10,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="350" TextChanged="pathText_TextChanged"/>
+        <Button Content="Browse..." HorizontalAlignment="Left" Height="20" Margin="370,10,0,0" VerticalAlignment="Top" Width="80" Click="Button_Click"/>
+        <Button x:Name="renameButton1" Content="replace spacings with underlines" HorizontalAlignment="Left" Height="55" Margin="10,60,0,0" VerticalAlignment="Top" Width="215" FontWeight="Bold" IsEnabled="false" Click="renameButton1_Click"/>
+        <CheckBox x:Name="subdirectoriesCheckbox" Content="include subdirectories" HorizontalAlignment="Left" Height="20" Margin="10,35,0,0" VerticalAlignment="Top" Width="200"/>
+        <Button x:Name="renameButton2" Content="replace hyphens with underlines" HorizontalAlignment="Left" Height="55" Margin="235,60,0,0" VerticalAlignment="Top" Width="215" FontWeight="Bold" IsEnabled="false" Click="renameButton2_Click"/>
+
+    </Grid>
+</Window>
