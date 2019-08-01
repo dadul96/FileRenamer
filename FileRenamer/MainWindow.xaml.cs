@@ -1,4 +1,13 @@
-﻿using System;
+﻿/*
+Title: File Renamer
+Description: This program automatically renames files in the selected directory and the subdirectories, if selected so. It can replace spaces or hyphens with underscores.
+Author: Daniel Duller
+Version: 1.0.0
+Creation date: 31.07.2019
+Last change: 01.08.2019
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,28 +38,31 @@ namespace FileRenamer
 
         static string[] files;
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void browseButton_Click(object sender, RoutedEventArgs e)
         {
             try
             {
                 using (var fbd = new FolderBrowserDialog())
                 {
-                    System.Windows.Forms.DialogResult result = fbd.ShowDialog();
+                    System.Windows.Forms.DialogResult result = fbd.ShowDialog();    //open the FolderBrowserDialog
 
                     if (result == System.Windows.Forms.DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
                     {
-                        pathText.Text = fbd.SelectedPath;
+                        pathText.Text = fbd.SelectedPath;   //set the TextBox-text to the directory path
+
+                        //count the files in the selected path and the subdirectories, if selected so:
+                        string[] tempFiles;
 
                         if (subdirectoriesCheckbox.IsChecked == true)
                         {
-                            files = Directory.GetFiles(fbd.SelectedPath, "*", SearchOption.AllDirectories);
+                            tempFiles = Directory.GetFiles(fbd.SelectedPath, "*", SearchOption.AllDirectories);
                         }
                         else
                         {
-                            files = Directory.GetFiles(fbd.SelectedPath);
+                            tempFiles = Directory.GetFiles(fbd.SelectedPath);
                         }
 
-                        System.Windows.MessageBox.Show(("Files found: " + files.Length.ToString()), "Information", MessageBoxButton.OK, MessageBoxImage.Information);
+                        System.Windows.MessageBox.Show(("Files found: " + tempFiles.Length.ToString()), "Information", MessageBoxButton.OK, MessageBoxImage.Information);
                     }
                 }
             }
@@ -64,6 +76,7 @@ namespace FileRenamer
         {
             try
             {
+                //enables the replace-buttons, if the TextBox contains a string:
                 if (pathText.Text != "")
                 {
                     renameButton1.IsEnabled = true;
@@ -85,6 +98,7 @@ namespace FileRenamer
         {
             try
             {
+                //get the files from the path, which is in the TextBox:
                 if (subdirectoriesCheckbox.IsChecked == true)
                 {
                     files = Directory.GetFiles(pathText.Text, "*", SearchOption.AllDirectories);
@@ -94,7 +108,7 @@ namespace FileRenamer
                     files = Directory.GetFiles(pathText.Text);
                 }
 
-                renameingFunction(" ");
+                renameOperation(" ");    //run the renaming function and replace the space characters (" ")
             }
             catch (Exception ex)
             {
@@ -106,6 +120,7 @@ namespace FileRenamer
         {
             try
             {
+                //get the files from the path, which is in the TextBox:
                 if (subdirectoriesCheckbox.IsChecked == true)
                 {
                     files = Directory.GetFiles(pathText.Text, "*", SearchOption.AllDirectories);
@@ -115,7 +130,7 @@ namespace FileRenamer
                     files = Directory.GetFiles(pathText.Text);
                 }
 
-                renameingFunction("-");
+                renameOperation("-");    //run the renaming function and replace the hyphen characters ("-")
             }
             catch (Exception ex)
             {
@@ -123,7 +138,7 @@ namespace FileRenamer
             }
         }
 
-        private void renameingFunction(string elementToReplace)
+        private void renameOperation(string elementToReplace)    //renaming function
         {
             try
             {
@@ -133,7 +148,7 @@ namespace FileRenamer
                 {
                     int renamedFilesCount = 0;
 
-                    foreach (string oldFilePath in files)
+                    foreach (string oldFilePath in files)   //replacing algorithm
                     {
                         string newFilePath = oldFilePath;
                         int namePos = 0;
