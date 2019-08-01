@@ -10,9 +10,9 @@
     <Grid>
         <TextBox x:Name="pathText" HorizontalAlignment="Left" Height="20" Margin="10,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="350" TextChanged="pathText_TextChanged"/>
         <Button Content="Browse..." HorizontalAlignment="Left" Height="20" Margin="370,10,0,0" VerticalAlignment="Top" Width="80" Click="Button_Click"/>
-        <Button x:Name="renameButton1" Content="replace spaces with underscores" HorizontalAlignment="Left" Height="55" Margin="10,60,0,0" VerticalAlignment="Top" Width="215" FontWeight="Bold" IsEnabled="false" Click="renameButton1_Click"/>
-        <CheckBox x:Name="subdirectoriesCheckbox" Content="include subdirectories" HorizontalAlignment="Left" Height="20" Margin="10,35,0,0" VerticalAlignment="Top" Width="200"/>
-        <Button x:Name="renameButton2" Content="replace hyphens with underscores" HorizontalAlignment="Left" Height="55" Margin="235,60,0,0" VerticalAlignment="Top" Width="215" FontWeight="Bold" IsEnabled="false" Click="renameButton2_Click"/>
+        <Button x:Name="renameButton1" Content="Replace spaces with underscores" HorizontalAlignment="Left" Height="55" Margin="10,60,0,0" VerticalAlignment="Top" Width="215" FontWeight="Bold" IsEnabled="false" Click="renameButton1_Click"/>
+        <CheckBox x:Name="subdirectoriesCheckbox" Content="Include subdirectories" HorizontalAlignment="Left" Height="20" Margin="10,35,0,0" VerticalAlignment="Top" Width="200"/>
+        <Button x:Name="renameButton2" Content="Replace hyphens with underscores" HorizontalAlignment="Left" Height="55" Margin="235,60,0,0" VerticalAlignment="Top" Width="215" FontWeight="Bold" IsEnabled="false" Click="renameButton2_Click"/>
 
     </Grid>
 </Window>
