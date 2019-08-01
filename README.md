@@ -1,5 +1,5 @@
 # FileRenamer
-This windows programm automatically renames files in the selected directory and the subdirectories, if selected so. It can replace spaces or hyphens with underscores.
+This windows program automatically renames files in the selected directory and the subdirectories, if selected so. It can replace spaces or hyphens with underscores.
 
 ![](screenshot.png)
 
