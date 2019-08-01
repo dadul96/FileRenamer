@@ -4,7 +4,7 @@ This windows program automatically renames files in the selected directory and t
 ![](screenshot.png)
 
 ### Installation
-There is no installation required. Just download the **FileRenamer.exe** (from [Releases](https://github.com/dadul96/FileRenamer/releases)) and double click it.
+There is no installation required. Just download the **FileRenamer.exe** (from [Releases](https://github.com/dadul96/FileRenamer/releases)) and double-click it.
 
 ### Built With
 * [Visual Studio 2019](https://visualstudio.microsoft.com/) - IDE used for programming
