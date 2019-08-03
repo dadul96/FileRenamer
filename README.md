@@ -6,6 +6,9 @@ This windows program automatically renames files in the selected directory and t
 ### Installation
 There is no installation required. Just download the **FileRenamer.exe** (from [Releases](https://github.com/dadul96/FileRenamer/releases)) and double-click it.
 
+### Requirements
+.NET Framework version 4.5.2 or higher
+
 ### Built With
 * [Visual Studio 2019](https://visualstudio.microsoft.com/) - IDE used for programming
 * [.NET](https://dotnet.microsoft.com/download/dotnet-framework) - Framework version 4.5.2 used
