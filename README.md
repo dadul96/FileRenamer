@@ -18,4 +18,4 @@ There is no installation required. Just download the **FileRenamer.exe** (from [
 **Daniel Duller** - [dadul96](https://github.com/dadul96)
 
 ### License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
